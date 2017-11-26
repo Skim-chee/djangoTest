@@ -13,11 +13,11 @@ Simple react/django app mocking Broadway api usage
 
 ## Backend 
 
-Create a mySql database
+Install MySQL and configure: https://docs.oracle.com/javacomponents/advanced-management-console-2/install-guide/installing-and-configuring-mysql-database-advanced-management-console.htm#JSAMI-GUID-00D8401C-C5EF-4F7C-B211-8B268BA0DB91
 
-Create a table called "test_data" or something to your liking
+Create a database called "test_data" or something to your liking
 
-Update table name and login credentials in /backend/backend/settings.py 
+Update database name and login credentials in /backend/backend/settings.py 
 
 ```
 > cd backend 
