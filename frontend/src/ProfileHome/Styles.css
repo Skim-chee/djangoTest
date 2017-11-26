@@ -1,0 +1,47 @@
+.favoriteShows {
+	width: 1080px;
+	padding: 25px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.favoriteShows__show {
+	width: 250px;
+	height: 167px;
+	margin: 25px 0;	
+	padding: 25px;
+	background-color: #fff;
+	position: relative;
+}
+
+.favoriteShows__show:hover {
+	background-color: #bbbbbb;
+}
+
+.favoriteShows__show:hover .favoriteShows__title {
+	color:  #fff;
+}
+
+.favoriteShows__title-contain {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.favoriteShows__title {
+	text-align: center;
+	color: #b6b6b6;
+	font-size: 24px;	
+	font-family: Arial, Helvetica, sans-serif; 
+	text-shadow: 0px 1px 1px rgb(74, 74, 74);
+	transition: color 500ms;
+}
+
+.loading {
+	color: #ffffff;
+	font-size: 36px;
+	font-family: Arial, Helvetica, sans-serif; 
+	margin-top: 50px;
+}

@@ -8,6 +8,7 @@ class ShowSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
+	# Creates the link between User -> User.favorites -> Shows
 	favorites = serializers.HyperlinkedRelatedField(view_name='show-detail', many=True, queryset=Show.objects.all())
 	class Meta:
 		model = User

@@ -14,22 +14,25 @@ class App extends Component {
 		};
 	}
 
+	// Sets data to true once show data is loaded
 	addFavoriteShows = favoriteShows => {
-		this.setState({
-			data: true,
-			shows: [...this.state.shows, favoriteShows]
+		this.setState((prevState, props) => {
+			return {
+				data: true,
+				shows: [...prevState.shows, favoriteShows]
+			};
 		});
 	};
 
 	render() {
 		return (
-			<ProfileHome userId="1" addFavoriteShows={this.addFavoriteShows}>
-				{this.state.data === null ? (
-					<Loading />
-				) : (
-					<FavoriteShows shows={this.state.shows} />
-				)}
-			</ProfileHome>
+			<div className="container">
+				<ProfileHome userId="1" addFavoriteShows={this.addFavoriteShows}>
+					{this.state.data === null 
+						? <Loading />
+						: <FavoriteShows shows={this.state.shows} />}
+				</ProfileHome>
+			</div>
 		);
 	}
 }
