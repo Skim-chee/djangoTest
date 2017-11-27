@@ -21,10 +21,10 @@ export const getFavoriteShowsByUserId = userId => {
 const getFavoriteShows = shows => {
 	let promises = [];
 
-	// Creates array of promises 
-	for (const key in shows) {
-		promises.push(axios.get(`${shows[key]}`));
-	}
+	// Creates array of promises 	
+	shows.forEach(show => {
+		promises.push(axios.get(show));
+	});
 
 	// Returns the array of promises back up to getFavoriteShowsByUserId
 	return promises;
